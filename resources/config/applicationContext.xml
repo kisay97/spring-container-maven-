@@ -19,4 +19,29 @@
         <bean id="user1" class="com.estsoft.spring_container.User">
         	<constructor-arg value="둘리"/>
         </bean>
+        
+        <bean id="user2" class="com.estsoft.spring_container.User">
+        	<constructor-arg value="dooly@gmail.com" index="1"/>
+        	<constructor-arg value="둘리" index="0"/>
+        </bean>
+        
+        <bean id="friend" class="com.estsoft.spring_container.Friend">
+        	<constructor-arg value="마이콜"/>
+        </bean>
+        
+        <bean id="user3" class="com.estsoft.spring_container.User">
+        	<constructor-arg value="dooly@gmail.com" index="1"/>
+        	<constructor-arg value="도우너" index="0"/>
+        	<property name = "friend" ref="friend"/>
+        </bean>
+        
+        <bean id="user4" class="com.estsoft.spring_container.User">
+        	<property name="name" value="길동"/>
+        	<property name="email" value="gildong@gmail.com"/>
+        	<property name="friend">
+        		<bean class="com.estsoft.spring_container.Friend">
+        			<constructor-arg value="희동이"/>
+        		</bean>
+        	</property>
+        </bean>
 </beans>
