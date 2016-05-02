@@ -45,6 +45,12 @@ public class App {
     	User user4 = (User)applicationContext.getBean( "user4" );
     	System.out.println( user4 );
     	
+    	Guest guest1 = (Guest) applicationContext.getBean("guest");
+    	System.out.println(guest1);
+    	
+    	Guest guest2 = (Guest) applicationContext.getBean("guest2");
+    	System.out.println(guest2);
+    	
     	((ConfigurableApplicationContext) applicationContext).close();
     }
 }
